@@ -1,7 +1,7 @@
 # Stencyl-Debugging-Extension
 #### An extension for the Stencylworks game engine that adds better functionality for debugging
 
-My number one complaint with Stencyl is the lack of features to allow for in game testing, so I made this extension to add new blocks to add an in game console to your project!
+My number one complaint with Stencyl is the lack of features to allow for in game testing, so I made this extension to add an in game console to your project!
 
 ![Debugging Header](https://raw.githubusercontent.com/ess4654/Stencyl-Debugging-Extension/master/block-images/header.png "Debugging Header")
 
