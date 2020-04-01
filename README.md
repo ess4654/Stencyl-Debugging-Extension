@@ -3,7 +3,7 @@
 
 My number one complaint with Stencyl is the lack of features to allow for in game testing, so I made this extension to add new blocks to add an in game console to your project!
 
-![Debugging Header](attachment:https://raw.githubusercontent.com/ess4654/Stencyl-Debugging-Extension/master/block-images/header.png "Debugging Header")
+![Debugging Header](https://raw.githubusercontent.com/ess4654/Stencyl-Debugging-Extension/master/block-images/header.png "Debugging Header")
 
 ### Enable Debugging
 ![Enable Debugging](https://raw.githubusercontent.com/ess4654/Stencyl-Debugging-Extension/master/block-images/enable_debugging.png "Enable Debugging")
