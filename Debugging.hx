@@ -39,6 +39,7 @@ import openfl.events.KeyboardEvent;
 import openfl.events.TouchEvent;
 import openfl.net.URLLoader;
 import openfl.ui.Keyboard;
+import openfl.display.FPS;
 
 class Debugging extends SceneScript
 {
@@ -55,6 +56,7 @@ class Debugging extends SceneScript
 	private static var key_down:Bool;
 	private static var showing_num_actors_on_screen:Bool;
 	private static var showing_num_actors_in_scene:Bool;
+	private static var fps:FPS;
 
 	public static function setControl(_control:String, _keyName:String)
 	{
@@ -92,6 +94,8 @@ class Debugging extends SceneScript
 			if(((getGameAttribute("Debug")) : Bool)) {
 				ShowHideConsole(true);
 			}
+
+			fps = new FPS(-100, -100, 0xffffff);
 
 			initialized = true;
 		}
@@ -172,7 +176,7 @@ class Debugging extends SceneScript
 		AddLog(("Debugging Scene: ") + (getCurrentSceneName()));
 
 		if(show_fps) {
-			AddLog(("FPS: ") + (getStepSize()));
+			AddLog(("FPS: ") + (fps.currentFPS));
 		}
 
 		AddLog(FormattedCoordinate("Screen Size", getScreenWidth(), getScreenHeight()));
