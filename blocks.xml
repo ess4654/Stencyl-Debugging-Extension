@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<palette>	
+
+	<block tag="debug-state" spec="%0 Debugging" code="Debugging.ChangeState(~);" type="action" color="gray" returns="void" help="Enable/Disable Debugging">
+		<fields>
+			<dropdown order="0">
+				<choices>
+					<c text="Enable" code="true"/>
+					<c text="Disable" code="false"/>
+				</choices>
+			</dropdown>
+		</fields>
+	</block>
+
+	<block tag="debug-debugging" spec="Debugging" code="Debugging.IsDebugging()" type="normal" color="gray" returns="boolean" help="Returns true if debug console is open">
+	</block>
+
+	<block tag="debug-log" spec="Console Log %0" code="Debugging.Log(~);" type="action" color="gray" returns="void" help="Output text to the console">
+		<fields>
+			<text order="0"></text>
+		</fields>
+	</block>
+
+	<block tag="debug-set-debug-key" spec="Set Debug Console Key to %0" code="Debugging.SetDebugKey(~);" type="action" color="gray" returns="void" help="Set the control that opens the console">
+		<fields>
+			<control order="0"></control>
+		</fields>
+	</block>
+
+	<block tag="debug-console-text" spec="Set Console Text to %0" code="Debugging.SetConsoleText(~);" type="action" color="gray" returns="void" help="Set the font for the debugging console">
+		<fields>
+			<font order="0"></font>
+		</fields>
+	</block>
+
+	<block tag="debug-set-debug-set-action-key" spec="Set Debug Key %0 to %1" code="Debugging.SetDebugActionKey(~,~);" type="action" color="gray" returns="void" help="Set the control that opens the console">
+		<fields>
+			<dropdown order="0">
+				<choices>
+					<c text="0" code="0"></c>
+					<c text="1" code="1"></c>
+					<c text="2" code="2"></c>
+					<c text="3" code="3"></c>
+					<c text="4" code="4"></c>
+					<c text="5" code="5"></c>
+					<c text="6" code="6"></c>
+					<c text="7" code="7"></c>
+					<c text="8" code="8"></c>
+					<c text="9" code="9"></c>
+				</choices>
+			</dropdown>
+			<control order="1"></control>
+		</fields>
+	</block>
+
+	<block tag="debug-set-debug-action-key" spec="Debug Key %0 %1" code="Debugging.GetDebugKeyState(~,~)" type="normal" color="gray" returns="boolean" help="Get the keyboard state of a given hotkey">
+		<fields>
+			<dropdown order="0">
+				<choices>
+					<c text="0" code="0"></c>
+					<c text="1" code="1"></c>
+					<c text="2" code="2"></c>
+					<c text="3" code="3"></c>
+					<c text="4" code="4"></c>
+					<c text="5" code="5"></c>
+					<c text="6" code="6"></c>
+					<c text="7" code="7"></c>
+					<c text="8" code="8"></c>
+					<c text="9" code="9"></c>
+				</choices>
+			</dropdown>
+			<dropdown order="1">
+				<choices>
+					<c text="Is Down" code="1"></c>
+					<c text="Was Pressed" code="0"></c>
+					<c text="Was Released" code="2"></c>
+				</choices>
+			</dropdown>
+		</fields>
+	</block>
+
+	<block tag="debug-clear" spec="Clear Console" code="Debugging.Clear();" type="action" color="gray" returns="void" help="Clears the output of the console">
+	</block>
+
+	<block tag="debug-print-object" spec="%0 : %1" code="Debugging.FormattedKeyValue(~,~)" type="normal" color="green" returns="text" help="Returns a formatted key: value as text">
+		<fields>
+			<anything order="0"></anything>
+			<anything order="1"></anything>
+		</fields>
+	</block>
+
+	<block tag="debug-fps" spec="%0 FPS on Display" code="Debugging.FPS(~);" type="action" color="gray" returns="void" help="Enable/Disbale FPS in Debug Console">
+		<fields>
+			<dropdown order="0">
+				<choices>
+					<c text="Enable" code="true"></c>
+					<c text="Disbale" code="false"></c>
+				</choices>
+			</dropdown>
+		</fields>
+	</block>
+
+	<block tag="debug-print-coordinate" spec="%0 : ( %1 , %2 , %3 )" code="Debugging.FormattedCoordinate(~,~,~)" type="normal" color="green" returns="text" help="Returns a formatted coordinate as text">
+		<fields>
+			<anything order="0"></anything>
+			<anything order="1"></anything>
+			<anything order="2"></anything>
+		</fields>
+	</block>
+
+	<block tag="debug-print-vector" spec="%0 : ( %1 , %2 , %3 )" code="Debugging.FormattedVector(~,~,~,~)" type="normal" color="green" returns="text" help="Returns a formatted coordinate as text">
+		<fields>
+			<anything order="0"></anything>
+			<anything order="1"></anything>
+			<anything order="2"></anything>
+			<anything order="3"></anything>
+		</fields>
+	</block>
+
+	<block tag="debug-logic-concat" spec="%0 ? %1 : %2" code="Debugging.LogicConcat(~,~,~)" type="normal" color="green" returns="anything" help="Returns the first element if true and the last element if false">
+		<fields>
+			<boolean order="0"></boolean>
+			<anything order="1"></anything>
+			<anything order="2"></anything>
+		</fields>
+	</block>
+
+	<block tag="debug-enabled" spec="Debugging is Enabled" code="Debugging.isEnabled()" type="normal" color="gray" returns="boolean" help="Returns if debugging is enabled" hidden="true">
+	</block>
+
+	<block tag="debug-print-console" spec="Print Console to Screen" code="Debugging.PrintConsole(g);" type="Action" color="cyan" returns="void" help="Prints the contents of console to the screen">
+	</block>
+
+	<block tag="debug-check-input" spec="Check Debug Keys States" code="Debugging.CheckInput();" type="Action" color="red" returns="void" help="Checks for debug key input. (Not needed if Print Console to Screen is used)">
+	</block>
+
+	<block tag="debug-print-list" spec="Print List %0 to Console" code="Debugging.PrintList(~);" type="Action" color="gray" returns="void" help="Prints a list to the debug console">
+		<fields>
+			<list order="0"></list>
+		</fields>
+	</block>
+
+	<block tag="debug-print-list-2D" spec="Print 2D Array %0 to Console" code="Debugging.Print2DArray(~);" type="Action" color="gray" returns="void" help="Prints a 2D array of items to the debug console">
+		<fields>
+			<list order="0"></list>
+		</fields>
+	</block>
+
+	<block tag="debug-print-num-actors" spec="%0 Number of Actors %1 in Console" code="Debugging.ShowNumActors(~,~);" type="Action" color="gray" returns="void" help="Show/Hide the number of actors on screen or in the scene in the console window">
+		<fields>
+			<dropdown order="0">
+				<choices>
+					<c text="Show" code="true"></c>
+					<c text="Hide" code="false"></c>
+				</choices>
+			</dropdown>
+			<dropdown order="1">
+				<choices>
+					<c text="On Screen" code="0"></c>
+					<c text="In Scene" code="1"></c>
+				</choices>
+			</dropdown>
+		</fields>
+	</block>
+
+</palette>

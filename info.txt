@@ -1,0 +1,6 @@
+name=Debugging
+description=Debugging tool with in game console.
+author=Evan Svendsen
+website=https://twitter.com/TheJoblessCoder
+
+compatibility=all
