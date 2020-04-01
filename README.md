@@ -104,5 +104,8 @@ Print each item of a list to the console with index value.
 
 Given a valid 2D list, the contents will be printed to the console.
 
-Additional Notes: Debug Drawing will always be on if the console is open. The use of in game block can disable it.
+## Last Updated April 1, 2020 v1.0
 
+Additional Notes: Debug Drawing will always be on if the console is open. The use of in game block can disable it.
+Contact Me: thejoblesscoder@gmail.com
+Extension is Open Sourced and Licensed under MIT open source standards.
